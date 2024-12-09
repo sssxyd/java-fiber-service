@@ -6,7 +6,7 @@ buildscript {
 }
 
 plugins {
-    id 'java'
+    id 'java-library'
 }
 
 group = 'fiberservice'
@@ -27,14 +27,14 @@ dependencies {
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.12'
     implementation group: 'org.tomlj', name: 'tomlj', version: '1.1.1'
 
-    implementation group: 'io.netty', name: 'netty-all', version: '5.0.0.Alpha2'
-    implementation group: 'com.alibaba.fastjson2', name: 'fastjson2', version: '2.0.53'
-    implementation group: 'org.ow2.asm', name: 'asm', version: '9.7.1'
-    implementation group: 'commons-io', name: 'commons-io', version: '2.18.0'
-    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.17.0'
-    implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.5.0-M2'
-    implementation group: 'org.apache.commons', name: 'commons-text', version: '1.12.0'
-    implementation group: 'commons-codec', name: 'commons-codec', version: '1.17.1'
+    api group: 'io.netty', name: 'netty-all', version: '5.0.0.Alpha2'
+    api group: 'com.alibaba.fastjson2', name: 'fastjson2', version: '2.0.53'
+    api group: 'org.ow2.asm', name: 'asm', version: '9.7.1'
+    api group: 'commons-io', name: 'commons-io', version: '2.18.0'
+    api group: 'org.apache.commons', name: 'commons-lang3', version: '3.17.0'
+    api group: 'org.apache.commons', name: 'commons-collections4', version: '4.5.0-M2'
+    api group: 'org.apache.commons', name: 'commons-text', version: '1.12.0'
+    api group: 'commons-codec', name: 'commons-codec', version: '1.17.1'
 }
 
 test {
