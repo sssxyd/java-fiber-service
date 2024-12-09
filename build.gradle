@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        maven { name "Alibaba" ; url 'https://maven.aliyun.com/repository/public' }
+        maven { name "M2" ; url 'https://plugins.gradle.org/m2/' }
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group = 'fiberservice'
+version = '4.0.1'
+
+repositories {
+    maven { name "Alibaba" ; url "https://maven.aliyun.com/repository/public" }
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.11.3')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.36'
+
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.16'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.12'
+    implementation group: 'org.tomlj', name: 'tomlj', version: '1.1.1'
+
+    implementation group: 'io.netty', name: 'netty-all', version: '5.0.0.Alpha2'
+    implementation group: 'com.alibaba.fastjson2', name: 'fastjson2', version: '2.0.53'
+    implementation group: 'org.ow2.asm', name: 'asm', version: '9.7.1'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.18.0'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.17.0'
+    implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.5.0-M2'
+    implementation group: 'org.apache.commons', name: 'commons-text', version: '1.12.0'
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.17.1'
+}
+
+test {
+    useJUnitPlatform()
+}
